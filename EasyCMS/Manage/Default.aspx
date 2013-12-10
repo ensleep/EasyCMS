@@ -66,7 +66,7 @@
             }
         ];
         $(document).ready(function () {
-            $("#DivDateTime").html("今天是：" + (new Date()).toDateString() + "   当前时间：" + (new Date()).toTimeString());
+            updateDateTime();
             $("#DivRegion").tabs({
                 border: false,
                 onSelect: function (title) {
@@ -100,18 +100,38 @@
             });
         }
         function AddTabes(item) {
-
-            $('#DivRegion').tabs('add', {
-                title: $(item).html(),
-                content: "<iframe src='"+$(item).attr('title')+"' style='width:98%;height:95%'></iframe>",
-                closable: true,
-                collapsible: false,
-                tools: [{
-                    iconCls: 'icon-mini-refresh',
-                    handler: function () {
-                    }
-                }]
-            });
+            var $item=$(item);
+            var $ExistTab = null;
+            $.each($("#DivRegion").tabs("tabs"), function (index, it) {
+                console.warn($(it).panel("options").title);
+                console.warn($item.html());
+                if ($(it).panel("options").title == $item.html()) {
+                    $ExistTab = $(it);
+                    console.warn($ExistTab.panel("options").title);
+                }
+            })
+            if ($ExistTab==null) {
+                $('#DivRegion').tabs('add', {
+                    title: $item.html(),
+                    content: "<iframe id='" + $item.html() + "' src='" + $item.attr('title') + "' style='width:98%;height:95%'></iframe>",
+                    closable: true,
+                    collapsible: false,
+                    tools: [{
+                        iconCls: 'icon-mini-refresh',
+                        handler: function () {
+                            $("#" + $item.html()).attr("src",$("#" + $item.html()).attr("src"));
+                        }
+                    }]
+                });
+            } else {
+                console.warn($ExistTab.panel("options").title);
+                console.warn($ExistTab);
+                $("#DivRegion").tabs("select", $ExistTab.panel("options").title);
+            }
+        }
+        function updateDateTime() {
+            $("#DivDateTime").html("今天是：" + (new Date()).toDateString() + "   当前时间：" + (new Date()).toTimeString());
+            setTimeout(updateDateTime, 500);
         }
     </script>
 

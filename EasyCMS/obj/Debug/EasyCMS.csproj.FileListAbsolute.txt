@@ -4,3 +4,9 @@ e:\ensleep\documents\visual studio 2013\Projects\EasyCMS\EasyCMS\bin\EasyCMS.pdb
 e:\ensleep\documents\visual studio 2013\Projects\EasyCMS\EasyCMS\obj\Debug\EasyCMS.csprojResolveAssemblyReference.cache
 e:\ensleep\documents\visual studio 2013\Projects\EasyCMS\EasyCMS\obj\Debug\EasyCMS.dll
 e:\ensleep\documents\visual studio 2013\Projects\EasyCMS\EasyCMS\obj\Debug\EasyCMS.pdb
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS.dll.config
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS.dll
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS.pdb
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\obj\Debug\EasyCMS.csprojResolveAssemblyReference.cache
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\obj\Debug\EasyCMS.dll
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\obj\Debug\EasyCMS.pdb
