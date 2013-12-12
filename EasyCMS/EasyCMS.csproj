@@ -41,7 +41,16 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -409,6 +418,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Home\" />
     <Folder Include="Images\" />
+    <Folder Include="Manage\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\easyuithemes\black\images\Thumbs.db" />
@@ -417,12 +427,27 @@
     <Content Include="Css\easyuithemes\gray\images\Thumbs.db" />
     <Content Include="Css\easyuithemes\metro\images\Thumbs.db" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyCMS_Bll\EasyCMS_BLL.csproj">
+      <Project>{61c17745-0c6a-4c42-87a0-3e8642738822}</Project>
+      <Name>EasyCMS_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyCMS_Dal\EasyCMS_DAL.csproj">
+      <Project>{f2e3f317-e93f-47e8-affd-bd77dba761cc}</Project>
+      <Name>EasyCMS_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyCMS_Model\EasyCMS_Model.csproj">
+      <Project>{f2e1d459-fa01-4e58-b757-e4f3d2321326}</Project>
+      <Name>EasyCMS_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

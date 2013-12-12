@@ -10,9 +10,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MenuName" Type="nchar" MaxLength="10" />
-          <Property Name="MenuUrl" Type="nchar" MaxLength="10" />
-          <Property Name="Enable" Type="nchar" MaxLength="10" />
+          <Property Name="MenuName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MenuUrl" Type="nvarchar(max)" />
+          <Property Name="Enable" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ES_Menu_Role">
           <Key>
@@ -36,7 +36,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LogName" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="LogPassword" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="RoldId" Type="int" />
+          <Property Name="RoleId" Type="int" />
           <Property Name="Enable" Type="int" />
         </EntityType>
         <EntityContainer Name="EasyCMSModelStoreContainer">
@@ -60,9 +60,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MenuName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="MenuUrl" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Enable" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MenuUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Enable" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ES_Menu_Role">
           <Key>
@@ -86,7 +86,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LogName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="LogPassword" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="RoldId" Type="Int32" />
+          <Property Name="RoleId" Type="Int32" />
           <Property Name="Enable" Type="Int32" />
         </EntityType>
       </Schema>
@@ -126,7 +126,7 @@
             <EntityTypeMapping TypeName="EasyCMSModel.ES_User">
               <MappingFragment StoreEntitySet="ES_User">
                 <ScalarProperty Name="Enable" ColumnName="Enable" />
-                <ScalarProperty Name="RoldId" ColumnName="RoldId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
                 <ScalarProperty Name="LogPassword" ColumnName="LogPassword" />
                 <ScalarProperty Name="LogName" ColumnName="LogName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />

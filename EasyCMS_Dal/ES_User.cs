@@ -17,7 +17,7 @@ namespace EasyCMS_Dal
         public int Id { get; set; }
         public string LogName { get; set; }
         public string LogPassword { get; set; }
-        public Nullable<int> RoldId { get; set; }
+        public Nullable<int> RoleId { get; set; }
         public Nullable<int> Enable { get; set; }
     }
 }
