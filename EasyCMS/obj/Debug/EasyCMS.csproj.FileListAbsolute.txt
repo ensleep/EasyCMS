@@ -10,16 +10,8 @@ E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS.pdb
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\obj\Debug\EasyCMS.csprojResolveAssemblyReference.cache
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\obj\Debug\EasyCMS.dll
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\obj\Debug\EasyCMS.pdb
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS.mdf
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS_log.ldf
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS_Bll.dll
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS_Dal.dll
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS_Model.dll
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EntityFramework.dll
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EntityFramework.SqlServer.dll
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS_Bll.pdb
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS_Dal.pdb
-E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EasyCMS_Model.pdb
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EntityFramework.xml
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EntityFramework.SqlServer.xml
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\zh-Hans\EntityFramework.resources.dll

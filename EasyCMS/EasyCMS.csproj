@@ -53,6 +53,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -67,6 +69,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EasyCMS.mdf" />
+    <Content Include="App_Data\EasyCMS_log.ldf">
+      <DependentUpon>EasyCMS.mdf</DependentUpon>
+    </Content>
+    <Content Include="BasePage.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Manage\Default.aspx" />
     <Content Include="Scripts\easyloader.js" />
@@ -394,16 +401,53 @@
     <Content Include="Css\easyuithemes\metro\tree.css" />
     <Content Include="Css\easyuithemes\metro\validatebox.css" />
     <Content Include="Css\easyuithemes\metro\window.css" />
-    <Content Include="Scripts\jquery.min.1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ajax\AjaxUserMenu.ashx.cs">
+      <DependentUpon>AjaxUserMenu.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.aspx.cs">
+      <DependentUpon>BasePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasePage.aspx.designer.cs">
+      <DependentUpon>BasePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\EC_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EC_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\EC_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\EC_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EC_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ES_Menu.cs">
+      <DependentUpon>EC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ES_Menu_Role.cs">
+      <DependentUpon>EC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ES_Role.cs">
+      <DependentUpon>EC_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\ES_User.cs">
+      <DependentUpon>EC_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Manage\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -412,10 +456,11 @@
     <Compile Include="Manage\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Menu.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Home\" />
     <Folder Include="Images\" />
     <Folder Include="Manage\Admin\" />
@@ -428,6 +473,24 @@
     <Content Include="Css\easyuithemes\metro\images\Thumbs.db" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="packages.config" />
+    <EntityDeploy Include="Entity\EC_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EC_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entity\EC_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EC_Model.edmx</DependentUpon>
+      <LastGenOutput>EC_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entity\EC_Model.edmx.diagram">
+      <DependentUpon>EC_Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entity\EC_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EC_Model.edmx</DependentUpon>
+      <LastGenOutput>EC_Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Ajax\AjaxUserMenu.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -436,18 +499,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EasyCMS_Bll\EasyCMS_BLL.csproj">
-      <Project>{61c17745-0c6a-4c42-87a0-3e8642738822}</Project>
-      <Name>EasyCMS_BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EasyCMS_Dal\EasyCMS_DAL.csproj">
-      <Project>{f2e3f317-e93f-47e8-affd-bd77dba761cc}</Project>
-      <Name>EasyCMS_DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EasyCMS_Model\EasyCMS_Model.csproj">
-      <Project>{f2e1d459-fa01-4e58-b757-e4f3d2321326}</Project>
-      <Name>EasyCMS_Model</Name>
-    </ProjectReference>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

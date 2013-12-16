@@ -8,7 +8,7 @@
     <title></title>
     <link href="../Css/easyuithemes/icon.css" rel="stylesheet" />
     <link href="../Css/easyuithemes/bootstrap/easyui.css" rel="stylesheet" />
-    <script src="../Scripts/jquery.min.1.10.2.js"></script>
+    <script src="../Scripts/jquery-1.10.2.js"></script>
     <script src="../Scripts/jquery.easyui.min.js"></script>
     <style type="text/css">
         .MenuBtn{
@@ -86,17 +86,35 @@
                 }]
             });
         })
+        var err;
         function LoadMenu() {
-            $.each(DemoMenu, function (index, item) {
-                var innerhtml = '';
-                $.each(item.ChildMenu, function (indexchild,itemchild) {
-                    innerhtml+="<button class='MenuBtn' onclick='AddTabes(this)' title='"+itemchild.Url+"'>" + itemchild.Text + "</button><br/>";
-                });
-                $('#DivMenuBar').accordion('add', {
-                    title: item.Text,
-                    content: innerhtml,
-                    selected: false
-                });
+            console.log('started ajax');
+            $.ajax({
+                url: "../Ajax/AjaxUserMenu.ashx?action=GetUserMenu",
+                context: "",
+                success: function (data) {
+                    console.log('ajax is ok,get the date');
+                    DemoMenu = jQuery.parseJSON(data);
+                    console.log(DemoMenu[0].Text);
+                    $.each(DemoMenu, function (index, item) {
+                        console.log('do with ;' + item.Text);
+                        var innerhtml = '';
+                        $.each(item.ChildMenu, function (indexchild, itemchild) {
+                            console.log('find childmenu of' + item.Text);
+                            console.log('this childmenu is:'+itemchild.Text)
+                            innerhtml += "<button class='MenuBtn' onclick='AddTabes(this)' title='" + itemchild.Url + "'>" + itemchild.Text + "</button><br/>";
+                        });
+                        $('#DivMenuBar').accordion('add', {
+                            title: item.Text,
+                            content: innerhtml,
+                            selected: false
+                        });
+                    });
+                },
+                error: function (er) {
+                    err = er;
+                    alert('something is wrong!'+er.toString());
+                }
             });
         }
         function AddTabes(item) {

@@ -4,17 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EasyCMS_Bll.Manage;
-using EasyCMS_Dal;
+using EasyCMS.Entity;
+using EasyCMS.Model;
 
 namespace EasyCMS.Manage
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BLL_Menu bll = new BLL_Menu();
-            List<ES_Menu> list = bll.GetMenuByUserId(1);
+            
         }
     }
 }
