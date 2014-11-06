@@ -4,16 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EasyCMS.Entity;
-using EasyCMS.Model;
 
-namespace EasyCMS.Manage
+namespace EasyCMS
 {
-    public partial class Default : BasePage
+    public partial class Test : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            dgUser.DataSource = ES_BLL.Class1.GetAllUser();   
+            dgUser.DataSource = ES_BLL.Class1.GetAllUser();
+            dgUser.DataBind();
         }
     }
 }

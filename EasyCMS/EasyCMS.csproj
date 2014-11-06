@@ -402,6 +402,7 @@
     <Content Include="Css\easyuithemes\metro\validatebox.css" />
     <Content Include="Css\easyuithemes\metro\window.css" />
     <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -459,6 +460,13 @@
     <Compile Include="Model\Menu.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Home\" />
@@ -500,6 +508,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ES_BLL\ES_BLL.csproj">
+      <Project>{46c71523-6353-4520-a883-58c3d7fed586}</Project>
+      <Name>ES_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ES_MODEL\ES_MODEL.csproj">
+      <Project>{3e9d4685-43c7-4544-a9f6-3316c257b8ce}</Project>
+      <Name>ES_MODEL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

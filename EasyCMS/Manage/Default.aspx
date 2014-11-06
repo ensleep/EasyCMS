@@ -164,7 +164,7 @@
     <div id="DivMenuBar" class="easyui-accordion" data-options="region:'west',split:true" title="管理员" style="width:200px;min-height:350px">
     </div>
     <div id="DivRegion" data-options="region:'center',collapsible:'false'">
-
+        <asp:DataGrid ID="dgUser" runat="server"></asp:DataGrid>
     </div>
 
     

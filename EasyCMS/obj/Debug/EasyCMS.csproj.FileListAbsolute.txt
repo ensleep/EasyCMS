@@ -16,3 +16,9 @@ E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EntityFramework.xml
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\EntityFramework.SqlServer.xml
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\zh-Hans\EntityFramework.resources.dll
 E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\ES_BLL.dll
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\ES_MODEL.dll
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\ES_DAL.dll
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\ES_BLL.pdb
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\ES_MODEL.pdb
+E:\ensleep\Documents\GitHub\EasyCMS\EasyCMS\bin\ES_DAL.pdb
